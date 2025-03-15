@@ -12,9 +12,10 @@ namespace win_okienka
 {
     public partial class Form3: Form
     {
-        public Form3()
+        public Form3(string wartosc)
         {
             InitializeComponent();
+            textBox1.Text = wartosc;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,6 +30,11 @@ namespace win_okienka
             Form form1 = new Form1();
             form1.Show();
             this.Hide();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

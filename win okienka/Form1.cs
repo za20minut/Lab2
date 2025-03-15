@@ -59,7 +59,7 @@ namespace win_okienka
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form form3 = new Form3();
+            Form form3 = new Form3("s");
             form3.Show();
             this.Hide();
         }
@@ -69,6 +69,11 @@ namespace win_okienka
             Form form2 = new Form2();
             form2.Show();
             this.Hide();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
