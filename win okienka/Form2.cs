@@ -67,13 +67,15 @@ namespace win_okienka
             Form form1 = new Form1();
             form1.Show();
             this.Hide();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form form3 = new Form3("s", "s");
+            Form form3 = new Form3();
             form3.Show();
             this.Hide();
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -100,17 +102,13 @@ namespace win_okienka
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string wartosc = textBox3.Text;
-            Form form3 = new Form3(wartosc,"s");
+            GlobalVars.tester2 = textBox3.Text;
+            Form form3 = new Form3();
             form3.Show();
             this.Hide();
+
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-            int liczba1 = int.Parse(textBox1.Text);
-            int liczba2 = int.Parse(textBox2.Text);
-            label3.Text = (liczba1 + liczba2).ToString();
-        }
+        
     }
 }

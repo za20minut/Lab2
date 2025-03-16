@@ -18,7 +18,6 @@ namespace win_okienka
         {
             InitializeComponent();
         }
-
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -59,9 +58,10 @@ namespace win_okienka
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form form3 = new Form3("s","s");
+            Form form3 = new Form3();
             form3.Show();
             this.Hide();
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -69,6 +69,7 @@ namespace win_okienka
             Form form2 = new Form2();
             form2.Show();
             this.Hide();
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -78,10 +79,13 @@ namespace win_okienka
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string wartosc2 = textBox1.Text;
-            Form form3 = new Form3("s",wartosc2);
+            GlobalVars.tester1 = textBox1.Text;
+            Form form3 = new Form3();
             form3.Show();
             this.Hide();
+
         }
+
+       
     }
 }

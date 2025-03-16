@@ -12,18 +12,16 @@ namespace win_okienka
 {
     public partial class Form3: Form
     {
-        bool czeker1 = false;
-        bool czeker2 = false;
-        public Form3(string wartosc,string wartosc2)
+        
+        public Form3()
         {
             InitializeComponent();
-            if (wartosc != "s") { textBox1.Text = wartosc;czeker1 = true; }
-            if (wartosc2 != "s") { textBox2.Text = wartosc2;czeker2 = true; }
-            if (czeker1 == true && czeker2 == true) {
-                int liczba1 = int.Parse(textBox1.Text);
-                int liczba2 = int.Parse(textBox2.Text);
-                textBox3.Text = (liczba1 + liczba2).ToString(); }
-            
+
+            textBox1.Text = GlobalVars.tester2;
+            textBox2.Text = GlobalVars.tester1;
+            int liczba1 = int.Parse(textBox1.Text);
+            int liczba2 = int.Parse(textBox2.Text);
+            textBox3.Text = (liczba1 + liczba2).ToString();
 
         }
 
@@ -32,6 +30,7 @@ namespace win_okienka
             Form form2 = new Form2();
             form2.Show();
             this.Hide();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -39,6 +38,7 @@ namespace win_okienka
             Form form1 = new Form1();
             form1.Show();
             this.Hide();
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -55,5 +55,12 @@ namespace win_okienka
         {
 
         }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
